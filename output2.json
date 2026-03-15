@@ -1,0 +1,27 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "Dal_Bati_Churma",
+        "to": "Dal Bati Churma"
+      },
+      {
+        "from": "Ker_Sangri",
+        "to": "Ker Sangri"
+      }
+    ],
+    "pages": {
+      "6939034": {
+        "pageid": 6939034,
+        "ns": 0,
+        "title": "Dal Bati Churma"
+      },
+      "-1": {
+        "ns": 0,
+        "title": "Ker Sangri",
+        "missing": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "Dal_baati",
+        "to": "Dal baati"
+      },
+      {
+        "from": "Dal_makhani",
+        "to": "Dal makhani"
+      },
+      {
+        "from": "Shahi_paneer",
+        "to": "Shahi paneer"
+      },
+      {
+        "from": "Ker_sangri",
+        "to": "Ker sangri"
+      },
+      {
+        "from": "Gulab_jamun",
+        "to": "Gulab jamun"
+      }
+    ],
+    "pages": {
+      "480550": {
+        "pageid": 480550,
+        "ns": 0,
+        "title": "Thali",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Vegetarian_Curry.jpeg/500px-Vegetarian_Curry.jpeg",
+          "width": 800,
+          "height": 450
+        },
+        "pageimage": "Vegetarian_Curry.jpeg"
+      },
+      "535399": {
+        "pageid": 535399,
+        "ns": 0,
+        "title": "Samosa",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samosa-and-Chatni.jpg/960px-Samosa-and-Chatni.jpg",
+          "width": 800,
+          "height": 757
+        },
+        "pageimage": "Samosa-and-Chatni.jpg"
+      },
+      "977446": {
+        "pageid": 977446,
+        "ns": 0,
+        "title": "Gulab jamun",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Bowl_of_Gulab_Jamuns.jpg/960px-Bowl_of_Gulab_Jamuns.jpg",
+          "width": 800,
+          "height": 532
+        },
+        "pageimage": "Bowl_of_Gulab_Jamuns.jpg"
+      },
+      "12748992": {
+        "pageid": 12748992,
+        "ns": 0,
+        "title": "Dal makhani",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Punjabi_style_Dal_Makhani.jpg/960px-Punjabi_style_Dal_Makhani.jpg",
+          "width": 800,
+          "height": 532
+        },
+        "pageimage": "Punjabi_style_Dal_Makhani.jpg"
+      },
+      "14854422": {
+        "pageid": 14854422,
+        "ns": 0,
+        "title": "Shahi paneer",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Shahi_panner.jpg/960px-Shahi_panner.jpg",
+          "width": 800,
+          "height": 600
+        },
+        "pageimage": "Shahi_panner.jpg"
+      },
+      "77339416": {
+        "pageid": 77339416,
+        "ns": 0,
+        "title": "Dal baati"
+      },
+      "-1": {
+        "ns": 0,
+        "title": "Ker sangri",
+        "missing": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "Dal_bapla",
+        "to": "Dal bapla"
+      },
+      {
+        "from": "Rajasthani_cuisine",
+        "to": "Rajasthani cuisine"
+      },
+      {
+        "from": "Bikaneri_bhujia",
+        "to": "Bikaneri bhujia"
+      }
+    ],
+    "pages": {
+      "2195914": {
+        "pageid": 2195914,
+        "ns": 0,
+        "title": "Rajasthani cuisine",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/The_delicious_Rajasthani_food.png/330px-The_delicious_Rajasthani_food.png",
+          "width": 800,
+          "height": 979
+        },
+        "pageimage": "The_delicious_Rajasthani_food.png"
+      },
+      "31076293": {
+        "pageid": 31076293,
+        "ns": 0,
+        "title": "Bikaneri bhujia",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Shop_selling_Bikaneri_bhujia_in_Jaipur.jpg/960px-Shop_selling_Bikaneri_bhujia_in_Jaipur.jpg",
+          "width": 800,
+          "height": 500
+        },
+        "pageimage": "Shop_selling_Bikaneri_bhujia_in_Jaipur.jpg"
+      },
+      "-1": {
+        "ns": 0,
+        "title": "Dal bapla",
+        "missing": ""
+      }
+    }
+  }
+}

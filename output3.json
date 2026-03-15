@@ -1,0 +1,48 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "Aloo_gobi",
+        "to": "Aloo gobi"
+      },
+      {
+        "from": "Palak_paneer",
+        "to": "Palak paneer"
+      },
+      {
+        "from": "Chana_masala",
+        "to": "Chana masala"
+      }
+    ],
+    "pages": {
+      "2859156": {
+        "pageid": 2859156,
+        "ns": 0,
+        "title": "Palak paneer",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Palakpaneer_Rayagada_Odisha_0009.jpg/960px-Palakpaneer_Rayagada_Odisha_0009.jpg",
+          "width": 800,
+          "height": 691
+        },
+        "pageimage": "Palakpaneer_Rayagada_Odisha_0009.jpg"
+      },
+      "3055213": {
+        "pageid": 3055213,
+        "ns": 0,
+        "title": "Chana masala",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Chana_masala.jpg/960px-Chana_masala.jpg",
+          "width": 800,
+          "height": 600
+        },
+        "pageimage": "Chana_masala.jpg"
+      },
+      "77339400": {
+        "pageid": 77339400,
+        "ns": 0,
+        "title": "Aloo gobi"
+      }
+    }
+  }
+}
