@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle2, XCircle, X } from 'lucide-react';
 
-const FORM_SUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/harshkumawat9950@gmail.com';
+const FORM_SUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/arpitakumawat1999@gmail.com';
 
 const formatTimeTo12Hour = (timeValue) => {
   if (!timeValue) {
@@ -29,6 +30,12 @@ const Reservation = () => {
     date: '',
     time: '',
     guests: '2',
+  });
+
+  const [modalConfig, setModalConfig] = useState({
+    isOpen: false,
+    type: 'success', // 'success' | 'error'
+    message: ''
   });
 
   const handleChange = (e) => {
@@ -77,11 +84,24 @@ const Reservation = () => {
         guests: '2',
       });
 
-      alert('Thank you! Your reservation request has been received.');
+      setModalConfig({
+        isOpen: true,
+        type: 'success',
+        message: 'Thank you for choosing us! Your reservation request has been received.'
+        //message: 'Thank you! Your reservation request has been received. We will confirm your table shortly.'
+      });
     } catch (error) {
       console.error('Reservation submission failed:', error);
-      alert('Sorry, we could not send your reservation request. Please try again.');
+      setModalConfig({
+        isOpen: true,
+        type: 'error',
+        message: 'Sorry, we could not send your reservation request. Please try calling us directly.'
+      });
     }
+  };
+
+  const closeModal = () => {
+    setModalConfig(prev => ({ ...prev, isOpen: false }));
   };
 
   return (
@@ -102,10 +122,10 @@ const Reservation = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-brand-charcoal mb-2">Full Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
                     required
                     value={formData.name}
                     onChange={handleChange}
@@ -115,10 +135,10 @@ const Reservation = () => {
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-brand-charcoal mb-2">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
                     required
                     value={formData.phone}
                     onChange={handleChange}
@@ -127,14 +147,14 @@ const Reservation = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <label htmlFor="date" className="block text-sm font-medium text-brand-charcoal mb-2">Date</label>
-                  <input 
-                    type="date" 
-                    id="date" 
-                    name="date" 
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
                     required
                     value={formData.date}
                     onChange={handleChange}
@@ -143,10 +163,10 @@ const Reservation = () => {
                 </div>
                 <div>
                   <label htmlFor="time" className="block text-sm font-medium text-brand-charcoal mb-2">Time</label>
-                  <input 
-                    type="time" 
-                    id="time" 
-                    name="time" 
+                  <input
+                    type="time"
+                    id="time"
+                    name="time"
                     required
                     value={formData.time}
                     onChange={handleChange}
@@ -155,9 +175,9 @@ const Reservation = () => {
                 </div>
                 <div>
                   <label htmlFor="guests" className="block text-sm font-medium text-brand-charcoal mb-2">Guests</label>
-                  <select 
-                    id="guests" 
-                    name="guests" 
+                  <select
+                    id="guests"
+                    name="guests"
                     value={formData.guests}
                     onChange={handleChange}
                     className="w-full border-b-2 border-brand-sand bg-transparent px-0 py-2 focus:outline-none focus:border-brand-brown transition-colors duration-300"
@@ -170,8 +190,8 @@ const Reservation = () => {
               </div>
 
               <div className="pt-6">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-full px-8 py-4 bg-brand-brown hover:bg-brand-maroon text-white font-semibold rounded-sm transition-all duration-300 tracking-wide shadow-md hover:shadow-xl group flex items-center justify-center gap-3"
                 >
                   Confirm Reservation
@@ -183,9 +203,9 @@ const Reservation = () => {
 
           {/* Image Side */}
           <div className="lg:w-1/2 relative min-h-[400px]">
-            <img 
-              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Restaurant Table Setting" 
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Restaurant Table Setting"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-brand-brown/40"></div>
@@ -203,6 +223,66 @@ const Reservation = () => {
           </div>
         </div>
       </div>
+
+      {/* Custom Popup Modal */}
+      <AnimatePresence>
+        {modalConfig.isOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeModal}
+              className="absolute inset-0 bg-brand-charcoal/60 backdrop-blur-sm cursor-pointer"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-md bg-brand-ivory rounded-xl shadow-2xl overflow-hidden z-10 p-8 text-center border border-brand-gold/20"
+            >
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-brand-charcoal/40 hover:text-brand-charcoal transition-colors"
+              >
+                <X size={24} />
+              </button>
+
+              <div className="mb-6 flex justify-center">
+                {modalConfig.type === 'success' ? (
+                  <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center border-4 border-green-50">
+                    <CheckCircle2 className="w-10 h-10 text-green-600" strokeWidth={2.5} />
+                  </div>
+                ) : (
+                  <div className="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center border-4 border-red-50">
+                    <XCircle className="w-10 h-10 text-brand-maroon" strokeWidth={2.5} />
+                  </div>
+                )}
+              </div>
+
+              <h3 className="text-3xl font-serif text-brand-brown mb-3">
+                {modalConfig.type === 'success' ? 'Reservation Sent' : 'Oops!'}
+              </h3>
+
+              <p className="text-brand-charcoal/80 mb-8 leading-relaxed">
+                {modalConfig.message}
+              </p>
+
+              <button
+                onClick={closeModal}
+                className={`w-full py-3 px-6 rounded-sm text-white font-medium transition-colors shadow-md ${modalConfig.type === 'success'
+                  ? 'bg-brand-brown hover:bg-brand-maroon focus:ring-brand-brown'
+                  : 'bg-brand-maroon hover:opacity-90 focus:ring-brand-maroon'
+                  }`}
+              >
+                {modalConfig.type === 'success' ? 'Done' : 'Try Again'}
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
