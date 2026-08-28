@@ -1,16 +1,30 @@
-# React + Vite
+# 🍲 Ganesh Bhojnalaya Jaipur — Restaurant Portal & Menu Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-EA4C89?logo=framer)](https://www.framer.com/motion/)
 
-Currently, two official plugins are available:
+> Dedicated production and master repository for **Ganesh Bhojnalaya Jaipur**, presenting authentic heritage recipes, live banquet inquiries, and interactive meal ordering experiences.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
+- **Authentic Rajasthani & North Indian Menu**: Category browsing with high-resolution imagery.
+- **Instant Table Reservation**: Direct customer reservation form.
+- **Fluid Layout**: Modern Tailwind CSS 4 styling with Framer Motion transitions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **Frontend**: React 19, Vite, Tailwind CSS 4, Framer Motion, Lucide Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Running Locally
+```bash
+git clone https://github.com/Harshxu/ganeshbhojnalyajaipur.git
+cd ganeshbhojnalyajaipur
+npm install
+npm run dev
+```
